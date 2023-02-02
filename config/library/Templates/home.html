@@ -1,0 +1,36 @@
+{% include 'base.html'%}
+
+{%block title%}
+
+{% endblock %}
+{% block context %}
+
+
+<div class="card text-center" style="margin: 100px 0px;">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Books Library</h5>
+    <p class="card-text">
+      A library is a collection of sources of information and similar resources, made accessible to a defined community
+      for reference or borrowing. It provides physical or digital access to material, and may be a physical building or
+      room, or a virtual space, or both. A library's collection can include books, periodicals, newspapers, manuscripts,
+      films, maps, prints, documents, microform, CDs, cassettes, videotapes, DVDs, Blu-ray Discs, e-books, audiobooks,
+      databases, and other formats. Libraries range in size from a few shelves of books to several million items.
+
+      The word library derives from the Latin liber, meaning “book,” whereas a Latinized Greek word, bibliotheca, is the
+      origin of the word for library in German, Russian, and the Romance languages.
+
+
+    </p>
+    <a href="{%url 'booklist' %}" class="btn btn-primary">Go To Library</a>
+    <a href="{%url 'blogcreate' %}" class="btn btn-success">Book Create</a>
+  </div>
+  <div class="card-footer text-muted">
+
+  </div>
+</div>
+
+
+{% endblock context %}

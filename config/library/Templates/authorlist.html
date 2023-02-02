@@ -1,0 +1,43 @@
+
+
+
+{% extends 'base.html'%}
+
+
+
+{% block context %}
+
+
+
+<div class="col-5" style="margin: 40px auto; " >
+    <table class="table" style="border: 1px solid black;">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Author_Name</th>
+            <th scope="col">Age</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {% for Author in object_list %}
+            <th scope="row">1</th>
+            
+            <td>{{Author.name}}</td>
+            <td>{{Author.age}}</td>
+          </tr>
+          {% endfor %}
+          
+        </tbody>
+      </table>
+</div>
+
+
+
+
+
+
+
+    
+{% endblock context %}

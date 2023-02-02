@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+
+
+
+{% block context %}
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Summary</th>
+        <th scope="col">Published_Date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for Book in   object_list %}
+        <th scope="row">1</th>
+        <td>{{Book.title}}</td>
+        <td>{{Book.summary}}</td>
+        <td>{{Book.published_date}}</td>
+        <td>
+            <form action="{%url 'book_delete' Book.id %}" method="post" class="d-inline">
+                {% csrf_token %}
+                <input type="submit"class="btn btn-danger" value="Delete">
+               
+        
+            </form>
+            <form action="{%url 'book_update' Book.id %}" method="post" class="d-inline">
+                {% csrf_token %}
+                
+                <input type="submit"class="btn btn-success" value="update">
+               
+        
+            </form>
+
+        </td>
+       
+      </tr>
+      {% endfor %}
+    
+    </tbody>
+  </table>
+
+
+
+
+
+
+    
+{% endblock context %}
+
+
+
+
+
